@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace RentKendaraan.Models
 {
@@ -15,6 +16,8 @@ namespace RentKendaraan.Models
         public int? IdKendaraan { get; set; }
         public int? IdCustomer { get; set; }
         public int? IdJaminan { get; set; }
+
+        [Required(ErrorMessage = "Biaya tidak boleh kosong harus diisi dengan angka")]
         public int? Biaya { get; set; }
 
         public Customer IdCustomerNavigation { get; set; }

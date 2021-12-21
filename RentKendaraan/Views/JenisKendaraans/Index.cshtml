@@ -1,0 +1,43 @@
+﻿@model IEnumerable<RentKendaraan.Models.JenisKendaraan>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Jenis Kendaraan</h1>
+<a asp-action="Create">Create New</a>
+
+@using (Html.BeginForm("index", "Kendaraan", FormMethod.Get))
+{
+    <p>
+
+        Cari Data : @Html.TextBox("searchString")
+
+        <input type="submit" value="Filter" />
+    </p>
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayName("JenisKendaraan")
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NamaJenisKendaraan)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdJenisKendaraan"><i class="fas fa-pencil-alt"></i></a> |
+                    <a asp-action="Details" asp-route-id="@item.IdJenisKendaraan"><i class="fas fa-info"></i></a> |
+                    <a asp-action="Delete" asp-route-id="@item.IdJenisKendaraan"><i class="fas fa-trash-alt"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace RentKendaraan.Models
 {
@@ -9,6 +10,8 @@ namespace RentKendaraan.Models
         public DateTime? TglPengembalian { get; set; }
         public int? IdPeminjaman { get; set; }
         public int? IdKondisi { get; set; }
+
+        [Required(ErrorMessage = "Tidak boleh kosong")]
         public int? Denda { get; set; }
 
         public KondisiKendaraan IdKondisiNavigation { get; set; }

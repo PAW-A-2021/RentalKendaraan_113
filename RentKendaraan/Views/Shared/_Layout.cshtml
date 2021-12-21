@@ -3,15 +3,17 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - RentKendaraan</title>
+    <title>@ViewData["Title"] - Rental Kendaraan</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <script src="https://kit.fontawesome.com/3cabd77b54.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">RentKendaraan</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Rental Kendaraan</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -21,8 +23,18 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        <li class="dropdown nav-item">
+                            <a href="#" class="nav-link text-dark dropdown-toggle" data-toggle="dropdown">Daftar Rental <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Customer" asp-action="Index">Customer</a></liclass="nav-item">
+                                <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Peminjaman" asp-action="Index">Peminjaman</a></li>
+                                <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Pengembalian" asp-action="Index">Pengembalian</a></liclass="nav-item">
+                                <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Kendaraan" asp-action="Index">Kendaraan</a></li>
+                                <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="JenisKendaraan" asp-action="Index">Jenis Kendaraan</a></li>
+                                <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="KondisiKendaraan" asp-action="Index">Kondisi Kendaraan</a></li>
+                                <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Jaminan" asp-action="Index">Jaminan</a></li>
+                                <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Gender" asp-action="Index">Gender</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
